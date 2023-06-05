@@ -1,0 +1,23 @@
+{
+  "name": "aston",
+  "version": "1.0.0",
+  "description": "",
+  "main": "first.js",
+  "scripts": {
+    "start": "nodemon first.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danu-IT/Aston.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danu-IT/Aston/issues"
+  },
+  "homepage": "https://github.com/Danu-IT/Aston#readme",
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
+    "nodemon": "^2.0.22"
+  }
+}
