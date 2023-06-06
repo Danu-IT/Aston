@@ -51,7 +51,39 @@ const obj1 = { here: { is: "on", other: "3" }, object: "Y" };
 const obj2 = { here: { is: "on", other: "2" }, object: "Y" };
 
 const deepEqual = (obj1, obj2) => {
-  //TODO
+  const arrayKeysOne = Object.keys(obj1);
+  const arrayKeysTwo = Object.keys(obj2);
+
+  const arrayValuesOne = Object.values(obj1);
+  const arrayValuesTwo = Object.values(obj2);
+
+  for (let i = 0; i < arrayKeysOne.length; i++) {
+    if (arrayKeysOne[i] !== arrayKeysTwo[i]) return false;
+    if (
+      (typeof arrayValuesTwo[i] !== "object" &&
+        typeof arrayValuesOne[i] === "object") ||
+      (typeof arrayValuesTwo[i] === "object" &&
+        typeof arrayValuesOne[i] !== "object")
+    ) {
+      return false;
+    }
+    if (
+      typeof arrayValuesTwo[i] === "object" &&
+      typeof arrayValuesOne[i] === "object"
+    ) {
+      const returnValue = deepEqual(arrayValuesOne[i], arrayValuesTwo[i]);
+      return returnValue ? true : false;
+    } else if (
+      typeof arrayValuesTwo[i] !== "object" &&
+      typeof arrayValuesOne[i] !== "object"
+    ) {
+      if (arrayValuesTwo[i] !== arrayValuesOne[i]) {
+        return false;
+      }
+    }
+  }
+
+  return true;
 };
 
 // Task 5
