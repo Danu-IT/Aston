@@ -4,7 +4,7 @@
   "description": "",
   "main": "first.js",
   "scripts": {
-    "start": "nodemon m.js"
+    "start": "nodemon first.js"
   },
   "repository": {
     "type": "git",
