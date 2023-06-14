@@ -4,7 +4,7 @@
   "description": "",
   "main": "first.js",
   "scripts": {
-    "start": "nodemon double.js"
+    "start": "nodemon double.js,
   },
   "repository": {
     "type": "git",
